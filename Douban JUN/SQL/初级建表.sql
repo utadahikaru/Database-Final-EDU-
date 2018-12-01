@@ -61,5 +61,5 @@ values
 
 insert into movies(movieId,movieName,movieNameCN,movieRate,movieclass,movieCountry,movieDuration,movieDate,append)
 values
-("001","Wonder Woman","神奇女侠",7,"动作 奇幻 冒险","美国","141",2017-06-02,"")
-
+("001","Wonder Woman","神奇女侠",7,"动作 奇幻 冒险","美国","141",2017-06-02,""),
+("002","Vemon","毒液",7.3,"动作 科幻 惊悚","美国","107",2018-11-09,"")
