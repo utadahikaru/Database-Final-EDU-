@@ -31,11 +31,9 @@ castURL varchar(50)
 )
 
 create table castShow(
-movieId varchar(5) unique not null,
-castId varchar(5) unique not null,
-charactername varchar(20) not null,
-constraint foreign key(movieId) references movies(movieId),
-constraint foreign key(castId) references casts(castId)
+movieId varchar(5) not null,
+castId varchar(5) not null,
+charactername varchar(20) not null
 )
 
 create table usersSee(
@@ -55,10 +53,8 @@ constraint foreign key(castId) references casts(castId)
 )
 
 
-insert into users(userId,userName,userpassword,IsAdmin,MoviesNum)
-values
-("000000","JUN","mikumikuliu1234",1,0)
 
+<<<<<<< HEAD:Douban JUN/SQL/初级建表_pjr.sql
 insert into movies(movieId,movieName,movieNameCN,movieRate,movieclass,movieCountry,movieDuration,movieDate,append)
 values
 ("001","Wonder Woman","神奇女侠",7,"动作 奇幻 冒险","美国","141",2017-06-02,""),
@@ -67,3 +63,5 @@ values
 insert into casts
 values
 ('001',8.2,'Gaierjaduo','盖尔加朵',1978-02-23,'America','C:\Database-Final-EDU-\Douban JUN\GUIs\image\盖尔加朵.jpg')
+=======
+>>>>>>> 47f2374f64e28983703fd42340a0323c23e82ccc:Douban JUN/SQL/初级建表.sql
