@@ -1,6 +1,7 @@
 from tkinter import *
 from PIL import ImageTk,Image
 import pyodbc
+import pymysql
 
 class castsel():
     def __init__(self,master):
