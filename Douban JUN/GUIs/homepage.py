@@ -1,131 +1,173 @@
-# -*- coding: utf-8 -*-
+from tkinter import *
+from PIL import ImageTk,Image
+import pyodbc
 
-# Form implementation generated from reading ui file 'homepage.ui'
-#
-# Created by: PyQt5 UI code generator 5.11.3
-#
-# WARNING! All changes made in this file will be lost!
 
-from PyQt5 import QtCore, QtGui, QtWidgets
+class homesel():
+    def __init__(self,master):
+        homeselTk=master
+        # 菜单栏
+        self.menubar = Menu(homeselTk)
+        # 创建下拉菜单我的主页
+        self.infomenu = Menu(self.menubar, tearoff=0)
+        self.infomenu.add_command(label='个人主页', command=self.directtouser)
+        self.menubar.add_cascade(label='个人信息', menu=self.infomenu)
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(800, 600)
-        MainWindow.setAutoFillBackground(False)
-        MainWindow.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(100, 150, 236, 255), stop:1 rgba(91, 197, 191, 255));")
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
-        self.centralwidget.setObjectName("centralwidget")
-        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(300, 380, 231, 41))
-        font = QtGui.QFont()
-        font.setFamily("Microsoft YaHei UI")
-        font.setPointSize(10)
-        font.setBold(False)
-        font.setUnderline(False)
-        font.setWeight(50)
-        self.pushButton.setFont(font)
-        self.pushButton.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color: rgb(255, 106, 37);\n"
-"")
-        self.pushButton.setAutoDefault(False)
-        self.pushButton.setObjectName("pushButton")
-        self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(260, 190, 91, 31))
-        font = QtGui.QFont()
-        font.setFamily("微软雅黑")
-        font.setPointSize(13)
-        font.setBold(False)
-        font.setWeight(50)
-        self.label.setFont(font)
-        self.label.setStyleSheet("color: rgb(0, 0, 0);")
-        self.label.setTextFormat(QtCore.Qt.PlainText)
-        self.label.setObjectName("label")
-        self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(280, 250, 61, 41))
-        font = QtGui.QFont()
-        font.setFamily("微软雅黑")
-        font.setPointSize(13)
-        font.setBold(False)
-        font.setWeight(50)
-        self.label_2.setFont(font)
-        self.label_2.setAutoFillBackground(True)
-        self.label_2.setTextFormat(QtCore.Qt.PlainText)
-        self.label_2.setObjectName("label_2")
-        self.textEdit = QtWidgets.QTextEdit(self.centralwidget)
-        self.textEdit.setGeometry(QtCore.QRect(430, 190, 171, 41))
-        font = QtGui.QFont()
-        font.setFamily("微软雅黑")
-        font.setPointSize(13)
-        self.textEdit.setFont(font)
-        self.textEdit.setStyleSheet("background-color: rgb(239, 239, 239);")
-        self.textEdit.setObjectName("textEdit")
-        self.label_3 = QtWidgets.QLabel(self.centralwidget)
-        self.label_3.setGeometry(QtCore.QRect(320, 90, 201, 31))
-        font = QtGui.QFont()
-        font.setFamily("华康海报体W12")
-        font.setPointSize(20)
-        self.label_3.setFont(font)
-        self.label_3.setAutoFillBackground(False)
-        self.label_3.setStyleSheet("color: rgb(255, 255, 255);")
-        self.label_3.setFrameShadow(QtWidgets.QFrame.Plain)
-        self.label_3.setObjectName("label_3")
-        self.label_4 = QtWidgets.QLabel(self.centralwidget)
-        self.label_4.setGeometry(QtCore.QRect(580, 520, 201, 20))
-        font = QtGui.QFont()
-        font.setFamily("微软雅黑")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_4.setFont(font)
-        self.label_4.setStyleSheet("color: rgb(255, 255, 255);")
-        self.label_4.setObjectName("label_4")
-        self.textEdit_2 = QtWidgets.QTextEdit(self.centralwidget)
-        self.textEdit_2.setGeometry(QtCore.QRect(430, 250, 171, 41))
-        font = QtGui.QFont()
-        font.setFamily("微软雅黑")
-        font.setPointSize(13)
-        self.textEdit_2.setFont(font)
-        self.textEdit_2.setStyleSheet("background-color: rgb(239, 239, 239);")
-        self.textEdit_2.setObjectName("textEdit_2")
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 26))
-        self.menubar.setObjectName("menubar")
-        MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
+        # 创建下拉菜单信息查询
+        self.slmenu = Menu(self.menubar, tearoff=0)
+        self.slmenu.add_command(label='电影查询', command=self.directtofilm)
+        self.slmenu.add_command(label='演员查询', command=self.directtocast)
+        self.menubar.add_cascade(label='信息查询', menu=self.slmenu)
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        # 创建下拉菜单
+        self.abmenu = Menu(self.menubar, tearoff=0)
+        self.abmenu.add_command(label='开发者信息', command=self.directtodeveloper)
+        self.abmenu.add_separator()
+        self.abmenu.add_command(label='退出系统', command=homeselTk.quit)
+        self.menubar.add_cascade(label='关于我们', menu=self.abmenu)
+        homeselTk.config(menu=self.menubar)
 
-    def retranslateUi(self, MainWindow):
-        _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.pushButton.setText(_translate("MainWindow", "登录"))
-        self.label.setText(_translate("MainWindow", "用户名："))
-        self.label_2.setText(_translate("MainWindow", "密码："))
-        self.textEdit.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'微软雅黑\'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">请输入用户名</p></body></html>"))
-        self.label_3.setText(_translate("MainWindow", "花梨影评系统"))
-        self.label_4.setText(_translate("MainWindow", "CopyRight @2018-2019"))
-        self.textEdit_2.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'微软雅黑\'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">请输入密码</p></body></html>"))
+        # self.filmentry = Entry(castselTk,textvariable=StringVar(),text='请输入电影名称：',font=('Times New Roman', 12)) #Label“请输入电影名称”
+        # self.filmentry.place(x=220, y=50, width=300, height=35)
+        # self.filmselbt1 = Button(castselTk, text='查询', command=self.etgetsel,bg='green', fg='white') #查询Button
+        # self.filmselbt1.place(x=560, y=50, width=100, height=35)
+        mainloop()
 
-class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
-    def __init__(self):
-        super(MyWindow, self).__init__()
-        self.setupUi(self)
-if __name__ == '__main__':
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    mywindow = MyWindow()
-    mywindow.show()
-    sys.exit(app.exec_())
+    def directtouser(self):
+        from UserPage import usersel
+
+    def directtocast(self):
+        from castselect import castsel
+
+    def directtofilm(self):
+        from filmselect import filmsel
+
+    def directtodeveloper(self):
+        from developerpage import developsel
+    # def etgetsel(self):
+    #     s="盖尔加朵"
+    #     #s = self.filmentry.get() #输入已知的castNameCN演员中文名
+    #     # try:
+    #     conn_info = pyodbc.connect(
+    #                 'DRIVER={SQL Server};server=localhost;PORT=1433;database=DoubanJUN;user=sa;password=Junrupan9393')
+    #     curs = conn_info.cursor()
+    #     #连接数据库
+    #     print("database chongya!!!")
+    #
+    #     self.filmnameCNLabel = Label(castselTk, text=s, font=('微软雅黑', 20), anchor=NW)
+    #     self.filmnameCNLabel.place(x=370, y=70, width=350, height=41)
+    #     # 从显示演员的中文名
+    #
+    #     castname = '''SELECT  castName FROM casts   WHERE castNameCN ='%s' ''' % s
+    #     resultname = str(curs.execute(castname).fetchall()[0]).replace("('", "").replace("', )", "")
+    #     self.filmnameLabel = Label(castselTk, text=resultname, font=('微软雅黑', 12), anchor=NW)
+    #     self.filmnameLabel.place(x=370, y=120, width=230, height=30)
+    #     #从SQL数据库中获取演员的英文名
+    #
+    #     castcountry = '''SELECT  castCountry FROM casts   WHERE castNameCN ='%s' ''' % s
+    #     resultcountry = str(curs.execute(castcountry).fetchall()[0]).replace("('", "").replace("', )", "")
+    #     self.countryLabel = Label(castselTk, text=resultcountry, font=('微软雅黑', 12), anchor=NW)
+    #     self.countryLabel.place(x=370, y=170, width=370, height=40)
+    #     # 从SQL数据库中获取演员的国家
+    #
+    #     castbirth = '''SELECT  castBirthday FROM casts   WHERE castNameCN ='%s' ''' % s
+    #     resultbirth = str(curs.execute(castbirth).fetchall()[0]).replace("('", "").replace("', )", "")
+    #     self.birthLabel = Label(castselTk, text=resultbirth, font=('微软雅黑', 12), anchor=NW)
+    #     self.birthLabel.place(x=370, y=210, width=370, height=40)
+    #     # 从SQL数据库中获取演员的生日
+    #
+    #     img = '''SELECT castURL FROM casts  WHERE castNameCN ='%s' '''%s
+    #     resultimg = str(curs.execute(img).fetchall()[0]).replace("('", "").replace("', )", "")
+    #     print(resultimg)
+    #     img_open = Image.open(resultimg)
+    #     img_png = ImageTk.PhotoImage(img_open)
+    #     self.castimage = Label(castselTk, bg='white', height=200, width=200, image=img_png)
+    #     self.castimage.place(x=110, y=70)
+    #     # 从SQL数据库中获取演员的图片URL地址
+    #
+    #     self.sclabel = Label(castselTk, text='评分', font=('微软雅黑', 20), anchor=NW)
+    #     self.sclabel.place(x=480, y=340, width=71, height=41)
+    #     # Label“评分”
+    #
+    #     castscore = '''SELECT  castRate FROM  casts  WHERE castNameCN ='%s' ''' % s
+    #     resultscore = str(curs.execute(castscore).fetchall()[0]).replace("(", "").replace(", )", "")
+    #     print(resultscore)
+    #     self.scoreLabel = Label(castselTk, text=resultscore, font=('Times New Roman', 34), anchor=NW)
+    #     self.scoreLabel.place(x=490, y=390, width=80, height=80)
+    #     # 从SQL数据库中获取演员的评分
+    #
+    #     self.sclabel = Label(castselTk, text='我的评分', font=('微软雅黑', 20), anchor=NW)
+    #     self.sclabel.place(x=620, y=340, width=131, height=41)
+    #     # Label“我的评分”
+    #
+    #     self.scoreentry = Entry(castselTk, textvariable=StringVar(), text='0.0',
+    #                             font=('Times New Roman', 34))  # entry 输入评分
+    #     self.scoreentry.place(x=630, y=400, width=80, height=70)
+    #
+    #     self.scoresubmit = Button(castselTk, text='提交', bg='red', fg='white')  # 查询Button
+    #     self.scoresubmit.place(x=630, y=490, width=93, height=28)
+    #
+    #
+    #     self.filmlabel = Label(castselTk, text='出演电影', font=('微软雅黑', 16))
+    #     self.filmlabel.place(x=110, y=300, width=121, height=41)
+    #     # Label“出演电影”
+    #
+    #     mvimg = '''SELECT imgURL FROM casts,movies,castShow  WHERE casts.castId = castShow.castId and movies.movieId = castShow.movieId
+    #     and castNameCN ='%s' ''' % s
+    #     resultmvimg = str(curs.execute(mvimg).fetchall()[0]).replace("('", "").replace("', )", "")
+    #     print(resultmvimg)
+    #     mvimg_open = Image.open(resultmvimg)
+    #     mvimg_png = ImageTk.PhotoImage(mvimg_open)
+    #     self.movieimage = Label(castselTk, bg='white', height=140, width=120, image=mvimg_png)
+    #     self.movieimage.place(x=110, y=360)
+    #     # 从SQL数据库中获取电影的图片URL地址
+    #
+    #     filmnameCN = '''SELECT  movieNameCN FROM casts,movies,castShow  WHERE casts.castId = castShow.castId and movies.movieId = castShow.movieId
+    #     and castNameCN ='%s' ''' % s
+    #     nameCN = str(curs.execute(filmnameCN).fetchall()[0]).replace("('", "").replace("', )", "")
+    #     self.filmnameCNLabel = Label(castselTk, text=nameCN, font=('微软雅黑', 18), anchor=NW)  # Label“标签”
+    #     self.filmnameCNLabel.place(x=250, y=360, width=130, height=40)
+    #     # 从SQL数据库中获取电影的中文名
+    #
+    #     filmname = '''SELECT  movieName FROM casts,movies,castShow  WHERE casts.castId = castShow.castId and movies.movieId = castShow.movieId
+    #     and castNameCN ='%s' ''' % s
+    #     name = str(curs.execute(filmname).fetchall()[0]).replace("('", "").replace("', )", "")
+    #     self.filmnameLabel = Label(castselTk, text=name, font=('Times New Roman', 12), anchor=NW)  # Label“标签”
+    #     self.filmnameLabel.place(x=250, y=400, width=160, height=20)
+    #     # 从SQL数据库中获取电影的英文名
+    #
+    #     filmdate = '''SELECT  movieDate FROM casts,movies,castShow  WHERE casts.castId = castShow.castId and movies.movieId = castShow.movieId
+    #            and castNameCN ='%s' ''' % s
+    #     date = str(curs.execute(filmdate).fetchall()[0]).replace("('", "").replace("', )", "")
+    #     self.filmdateLabel = Label(castselTk, text=date, font=('Times New Roman', 12), anchor=NW)  # Label“标签”
+    #     self.filmdateLabel.place(x=250, y=430, width=130, height=40)
+    #     # 从SQL数据库中获取电影的日期
+    #
+    #     if nameCN==[]:
+    #         self.castseltx1.delete(0.0, END)
+    #         self.castseltx1.insert(1.0, '没有该电影信息')
+    #         conn_info.close()
+    #     else:
+    #         print(1)
+    #         self.castseltx1.delete(0.0, END)
+    #         self.castseltx1.insert(1.0, filmnameCN)   # 插入该电影的中文名字
+    #         # self.filmname.delete(0.0, END)
+    #         # self.filmname.insert(1.0, filmname)         # 插入该电影的名字
+    #         # self.actname.delete(0.0, END)
+    #         # self.actname.insert(1.0, resultactor)       #插入演员的名字
+    #         # self.score.delete(0.0, END)
+    #         # self.score.insert(1.0, resultscore)       #插入该电影的评分
+    #
+    #
+    #         conn_info.close()
+    #     # except:
+    #     #         print("lljbd")
+    #             # self.filmnameCN.delete(0.0,END)
+    #             # self.filmnameCN.insert(1.0,'连接数据库失败')
+
+
+homeselTk=Toplevel()
+homeselTk.title('用户主页') #设置窗口标题
+homeselTk.geometry('800x650')
+homeapp=homesel(homeselTk)
+homeselTk.mainloop()

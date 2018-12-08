@@ -1,3 +1,5 @@
+CREATE DATABASE DoubanJUN;
+USE DoubanJUN;
 create table users(
 userId varchar(10) unique not null,
 userName varchar(20) not null,
@@ -5,7 +7,7 @@ userpassword varchar(30) not null,
 IsAdmin tinyint default 0,
 MoviesNum int default 0,
 constraint Admin check(IsAdmin =1 or IsAdmin = 0)
-)
+);
 
 create table movies(
 movieId varchar(5) unique not null,
@@ -16,9 +18,10 @@ movieclass varchar(15) not null,
 movieCountry varchar(20) not null,
 movieDuration int not null,
 movieDate date not null,
-imgURL varchar(50),
+imgURL varchar(500),
 append text
-)
+);
+
 
 create table casts(
 castId varchar(5) unique not null,
@@ -28,38 +31,37 @@ castNameCN varchar(30) not null,
 castBirthday date not null,
 castCountry varchar(15) not null,
 castURL varchar(50)
-)
+);
 
 create table castShow(
 movieId varchar(5) unique not null,
 castId varchar(5) unique not null,
 charactername varchar(20) not null,
-constraint foreign key(movieId) references movies(movieId),
-constraint foreign key(castId) references casts(castId)
-)
+foreign key(movieId) references movies(movieId),
+foreign key(castId) references casts(castId)
+);
 
 create table usersSee(
 userId varchar(10) unique not null,
 movieId varchar(5) unique not null,
 userRate float not null,
-constraint foreign key(userId) references users(userId),
-constraint foreign key(movieId) references movies(movieId)
-)
+foreign key(userId) references users(userId),
+foreign key(movieId) references movies(movieId)
+);
 
 create table usersLove(
 userId varchar(10) unique not null,
 castId varchar(5) unique not null,
 userLoveRate float not null,
-constraint foreign key(userId) references users(userId),
-constraint foreign key(castId) references casts(castId)
-)
+foreign key(userId) references users(userId),
+foreign key(castId) references casts(castId)
+);
 
 
-insert into users(userId,userName,userpassword,IsAdmin,MoviesNum)
+insert into users (userId,userName,userpassword,IsAdmin,MoviesNum)
+values('000000','JUN','mikumikuliu1234',1,0);
+
+insert into movies (movieId,movieName,movieNameCN,movieRate,movieclass,movieCountry,movieDuration,movieDate,imgURL)
 values
-("000000","JUN","mikumikuliu1234",1,0)
-
-insert into movies(movieId,movieName,movieNameCN,movieRate,movieclass,movieCountry,movieDuration,movieDate,append)
-values
-("001","Wonder Woman","ç¥žå¥‡å¥³ä¾ ",7,"åŠ¨ä½œ å¥‡å¹» å†’é™©","ç¾Žå›½","141",2017-06-02,""),
-("002","Vemon","æ¯’æ¶²",7.3,"åŠ¨ä½œ ç§‘å¹» æƒŠæ‚š","ç¾Žå›½","107",2018-11-09,"")
+('001','Wonder Woman','ÉñÆæÅ®ÏÀ',7,'¶¯×÷ Ææ»Ã Ã°ÏÕ','ÃÀ¹ú','141','2017-06-02','https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2460006593.webp'),
+('002','Vemon','¶¾Òº',7.3,'¶¯×÷ ¿Æ»Ã ¾ªã¤','ÃÀ¹ú','107','2018-11-09','https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2537158013.webp')

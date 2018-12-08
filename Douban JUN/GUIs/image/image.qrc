@@ -1,7 +1,5 @@
 <RCC>
      <qresource>
-          <file>logo.png</file>
           <file>background.png</file>
-          <file>123.png</file>
      </qresource>
      </RCC>
