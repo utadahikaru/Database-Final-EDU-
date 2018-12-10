@@ -6,19 +6,12 @@ import pymysql
 class filmsel():
     def __init__(self, master):
         filmselTk = master
-
         self.filmentry = Entry(filmselTk, textvariable=StringVar(
         ), text='请输入电影名称：', font=('Times New Roman', 12))  # Label“请输入电影名称”
         self.filmentry.place(x=220, y=50, width=300, height=35)
         self.filmselbt1 = Button(
             filmselTk, text='查询', command=self.etgetsel, bg='green', fg='white')  # 查询Button
         self.filmselbt1.place(x=560, y=50, width=100, height=35)
-        # self.filmnameCN = Label(filmselTk, text='', font=('Times New Roman', 16)) #Label电影中文名称
-        # self.filmnameCN.place(x=340, y=120, width=370, height=40)
-        # self.filmname = Label(filmselTk,text='', font=('Times New Roman', 12))  #Label电影英文名称
-        # self.filmname.place(x=340, y=160, width=370, height=40)
-        #
-        # self.filmactrole = Label(filmselTk, text='', font=('Times New Roman', 11)) #Label演员饰演角色
 
         mainloop()
 
@@ -120,10 +113,12 @@ class filmsel():
                 filmselTk, text='演员表跳转', command=self.directtocast, bg='green', fg='white')  # 查询Button
             self.castpagebt.place(x=500, y=350, width=100, height=35)
             #######
-            # img = '''SELECT imgURL FROM movies  WHERE movieNameCN ='%s' ''' % s
-            # resultimg = str(curs.execute(img).fetchall()[0][0])
-            # print(resultimg)
-            self.pilImage = Image.open("Douban JUN/GUIs/wonderwoman.jpg")
+            img = '''SELECT imgURL FROM movies  WHERE movieNameCN ='%s' ''' % s
+
+            curs.execute(img)
+            resultimg = curs.fetchone()[0]
+            print(resultimg)
+            self.pilImage = Image.open(resultimg)
             self.img_png = ImageTk.PhotoImage(self.pilImage)
 
             self.filmimage = Label(filmselTk,
@@ -132,21 +127,17 @@ class filmsel():
             # self.filmimage.pack()
             # 从SQL数据库中获取电影的图片URL地址
 
-            ####################
-            # actimg1 = '''SELECT castURL FROM casts,castShow,movies  WHERE casts.castId = castShow.castId and castShow.movieId = movies.movieId and movieNameCN ='%s' ''' % s
-            # curs.execute(actimg1)
-            # actimg1 = str(curs.fetchall()[0][0])
-            # print(actimg1)
-            self.castimage = Image.open("Douban JUN/GUIs/galgadot.jpg")
+            actimg1 = '''SELECT castURL FROM casts,castShow,movies  WHERE casts.castId = castShow.castId and castShow.movieId = movies.movieId and movieNameCN ='%s' ''' % s
+            curs.execute(actimg1)
+            actimg1 = curs.fetchone()[0]
+            print(actimg1)
+            self.castimage = Image.open(actimg1)
             self.cast_png = ImageTk.PhotoImage(self.castimage)
             self. castimg = Label(filmselTk, bg='white',
                                   height=130, width=130, image=self.cast_png)
             self.castimg.place(x=360, y=260)
             # self.actimage.pack()
             # 从SQL数据库中获取演员的图片URL地址
-
-            # self.actimage.delete(0.0, END)
-            # self.actimage.insert(1.0, '没有该电影信息')
 
             conn_info.close()
         except:

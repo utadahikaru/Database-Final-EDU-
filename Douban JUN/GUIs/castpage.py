@@ -10,7 +10,7 @@ class castsel():
         mainloop()
 
     def etgetsel(self):
-        s = "盖尔 加朵"
+        s = "安妮 海瑟薇"
         print('传递到的名字为' + s)
         conn_info = pymysql.connect(
             "localhost", "test", "testnimabi", "DOUBAN_JUN")
@@ -23,9 +23,9 @@ class castsel():
         self.filmnameCNLabel.place(x=370, y=70, width=350, height=41)
         # 从显示演员的中文名
         castname = '''SELECT  castName FROM casts   WHERE castNameCN ='%s' ''' % s
+
         curs.execute(castname)
-        #resultname = str(curs.fetchall()[0][0])
-        resultname = 'Gal Gadot'
+        resultname = curs.fetchone()[0]
         print(resultname)
         self.filmnameLabel = Label(
             castselTk, text=resultname, font=('微软雅黑', 12), anchor=NW)
@@ -53,13 +53,13 @@ class castsel():
 
         img = '''SELECT castURL FROM casts  WHERE castNameCN ='%s' ''' % s
         curs.execute(img)
-        #resultimg = str(curs.fetchall()[0][0])
-        # print(resultimg)
-        #self.img_open = Image.open(resultimg)
-        #self.img_png = ImageTk.PhotoImage(img_open)
-        #self.castimage = Label(castselTk, bg='white',
-                               #height=200, width=200, image=img_png)
-        #self.castimage.place(x=110, y=70)
+        resultimg = curs.fetchone()[0]
+        print(resultimg)
+        self.img_open = Image.open(resultimg)
+        self.img_png = ImageTk.PhotoImage(self.img_open)
+        self.castimage = Label(castselTk, bg='white',
+                               height=200, width=200, image=self.img_png)
+        self.castimage.place(x=110, y=70)
         # 从SQL数据库中获取演员的图片URL地址
 
         self.sclabel = Label(castselTk, text='评分',
@@ -94,16 +94,16 @@ class castsel():
         self.filmlabel.place(x=110, y=300, width=121, height=41)
         # Label“出演电影”
 
-        #mvimg = '''SELECT imgURL FROM casts,movies,castShow  WHERE casts.castId = castShow.castId and movies.movieId = castShow.movieId
-        #and castNameCN ='%s' ''' % s
-        #curs.execute(mvimg)
-        #resultmvimg = str(curs.fetchall()[0][0])
-        #print(resultmvimg)
-        #mvimg_open = Image.open(resultmvimg)
-        #mvimg_png = ImageTk.PhotoImage(mvimg_open)
-        #self.movieimage = Label(castselTk, bg='white',
-                                #height=140, width=120, image=mvimg_png)
-        #self.movieimage.place(x=110, y=360)
+        mvimg = '''SELECT imgURL FROM casts,movies,castShow  WHERE casts.castId = castShow.castId and movies.movieId = castShow.movieId
+        and castNameCN ='%s' ''' % s
+        curs.execute(mvimg)
+        self.resultmvimg = str(curs.fetchall()[0][0])
+        print(self.resultmvimg)
+        self.mvimg_open = Image.open(self.resultmvimg)
+        self.mvimg_png = ImageTk.PhotoImage(self.mvimg_open)
+        self.movieimage = Label(castselTk, bg='white',
+                                height=140, width=120, image=self.mvimg_png)
+        self.movieimage.place(x=110, y=360)
         # 从SQL数据库中获取电影的图片URL地址
 
         filmnameCN = '''SELECT  movieNameCN FROM casts,movies,castShow  WHERE casts.castId = castShow.castId and movies.movieId = castShow.movieId
