@@ -4,7 +4,7 @@ from PIL import ImageTk, Image
 class mainsys():
     def __init__(self, master):
         tl = master
-        self.img = Image.open('C:\Database-Final-EDU-\Douban JUN\GUIs\image')
+        self.img = Image.open('Documents\Database-Final-EDU-\Douban JUN\GUIs\image')
         self.imgphoto = ImageTk.PhotoImage(self.img)
         self.imgtext=Text(tl,width=800,height=650)
         self.imgtext.image_create(END,image=self.imgphoto)

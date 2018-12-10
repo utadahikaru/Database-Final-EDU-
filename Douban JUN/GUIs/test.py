@@ -1,21 +1,14 @@
 import pymysql
 
-# 打开数据库连接
-db = pymysql.connect("localhost", "root", "mikumikuliu1234", "DOUBAN_JUN")
 
-# 使用cursor()方法获取操作游标
-cursor = db.cursor()
+conn_info = pymysql.connect(
+    "localhost", "test", "testnimabi", "DOUBAN_JUN")
+curs = conn_info.cursor()
 
-# SQL 查询语句
-sql = "select castName from casts where castId = 001"
-try:
-    # 执行SQL语句
-    cursor.execute(sql)
-    # 获取所有记录列表
-    results = cursor.fetchone()
-    print(results)
-except:
-    print ("Error: unable to fetch data")
+s = '盖尔 加朵'
+castname = '''SELECT  castName FROM casts   WHERE castNameCN ='%s' ''' % s
+curs.execute(castname)
+resultname = str(curs.fetchall()[0][0])
+print(resultname)
 
-# 关闭数据库连接
-db.close()
+conn_info.close()
