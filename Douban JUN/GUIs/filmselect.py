@@ -90,9 +90,9 @@ class filmsel():
             resultscore = curs.fetchall()
             # 从SQL数据库中获取电影的评分
 
-            self.scoreCN = Label(filmselTk, text='评分',
-                                 font=('微软雅黑', 20))  # Label“标签”
-            self.scoreCN.place(x=140, y=430, width=71, height=41)
+            self.scoreCN = Label(filmselTk, text='豆瓣评分',
+                                 font=('微软雅黑', 25))  # Label“标签”
+            self.scoreCN.place(x=140, y=430, width=100, height=41)
             self.score = Label(filmselTk, text='0.0',
                                font=('微软雅黑', 34))  # Label 电影评分
             self.score.place(x=130, y=480, width=81, height=81)
@@ -123,7 +123,7 @@ class filmsel():
 
             self.filmimage = Label(filmselTk,
                                    height=280, width=210, image=self.img_png)
-            self.filmimage.place(x=20, y=100)
+            self.filmimage.place(x=80, y=100)
             # self.filmimage.pack()
             # 从SQL数据库中获取电影的图片URL地址
 
