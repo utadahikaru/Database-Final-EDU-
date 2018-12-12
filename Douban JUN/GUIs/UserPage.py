@@ -131,7 +131,7 @@ class usersel():
 
 
 userselTk = Toplevel()
-
+userselTk.title('个人主页')
 userselTk.geometry('600x600')
 couselapp = usersel(userselTk)
 userselTk.mainloop()
