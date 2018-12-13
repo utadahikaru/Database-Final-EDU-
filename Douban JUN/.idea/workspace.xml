@@ -1,35 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/GUIs/filmselect.py" line="107" mnemonic="3" />
+    <bookmark url="file://$PROJECT_DIR$/GUIs/filmselect.py" line="125" mnemonic="3" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bdbb3a46-e528-4a45-82ba-0d64c4c448fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/SQL/用到的数据.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/casts/Al Pacino.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/casts/Anne Hathaway.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/casts/Gal Gadot.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/casts/Julia Roberts.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/casts/Leonardo Dicarprio.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/casts/Matt Damon.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/casts/Natalie Portman.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/casts/Tom Hanks.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/casts/Tom Hardy.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/casts/Zhangguorong.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/movies/aganzhengzhuan.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/movies/bawangbieji.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/movies/daomengkongjian.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/movies/duanbeishan.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/movies/jiaofu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/movies/piaoliangnvren.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/movies/taitannikehao.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/movies/xinlingbushou.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/movies/zhegeshashoubutaileng.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SQL/SQLQuery1_pjr.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SQL/SQLQuery1_pjr.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SQL/insert_pjr.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SQL/insert_pjr.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SQL/初级建表_pjr.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SQL/初级建表_pjr.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUIs/UserPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUIs/UserPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUIs/castpage.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUIs/castpage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUIs/castselect.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUIs/castselect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUIs/duanbeishan.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/GUIs/duanbeishan.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUIs/duanbeishan2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GUIs/duanbeishan2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUIs/filmselect.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUIs/filmselect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUIs/homepage.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUIs/homepage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUIs/image/background.png" beforeDir="false" afterPath="$PROJECT_DIR$/GUIs/image/background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUIs/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUIs/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/casts/Anne Hathaway.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/images/casts/Anne Hathaway.jpeg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,15 +24,48 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Douban_JUN$mainsystem.coverage" NAME="mainsystem Coverage Results" MODIFIED="1544240020831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUIs" />
+    <SUITE FILE_PATH="coverage/Douban_JUN$mainsystem.coverage" NAME="mainsystem Coverage Results" MODIFIED="1544683271265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUIs" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GUIs/UserPage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="625">
+              <caret line="28" column="83" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="83" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/GUIs/castpage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="122">
+              <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SQL/用到的数据.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GUIs/filmselect.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5">
-              <caret line="107" column="6" selection-start-line="107" selection-start-column="6" selection-end-line="115" selection-end-column="34" />
+            <state relative-caret-position="1025">
+              <caret line="44" column="58" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="58" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -57,53 +76,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GUIs/castselect.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GUIs/UserPage.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GUIs/castpage.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2175">
-              <caret line="89" column="50" selection-start-line="89" selection-start-column="50" selection-end-line="89" selection-end-column="50" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SQL/SQLQuery1_pjr.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2400">
-              <caret line="96" selection-start-line="96" selection-end-line="96" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SQL/insert_pjr.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="13" selection-start-line="13" selection-end-line="13" selection-end-column="9" />
+            <state relative-caret-position="1275">
+              <caret line="53" selection-start-line="53" selection-end-line="53" />
             </state>
           </provider>
         </entry>
@@ -111,10 +85,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GUIs/homepage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="38" column="27" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
+            <state relative-caret-position="175">
+              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="15" selection-end-column="36" />
               <folding>
-                <element signature="e#0#21#0" expanded="true" />
+                <element signature="e#24#45#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -123,8 +97,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GUIs/developerpage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8">
-              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+            <state>
+              <caret selection-end-line="2" selection-end-column="14" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -135,8 +109,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GUIs/mainsystem.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
+            <state relative-caret-position="250">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -163,19 +137,20 @@
         <option value="$PROJECT_DIR$/GUIs/mainsystem.py" />
         <option value="$PROJECT_DIR$/SQL/初级建表.sql" />
         <option value="$PROJECT_DIR$/GUIs/filmpage.py" />
-        <option value="$PROJECT_DIR$/GUIs/UserPage.py" />
         <option value="$PROJECT_DIR$/GUIs/fimselect.py" />
-        <option value="$PROJECT_DIR$/GUIs/homepage.py" />
-        <option value="$PROJECT_DIR$/GUIs/castselect.py" />
-        <option value="$PROJECT_DIR$/GUIs/filmselect.py" />
-        <option value="$PROJECT_DIR$/GUIs/castpage.py" />
         <option value="$PROJECT_DIR$/GUIs/developerpage.py" />
+        <option value="$PROJECT_DIR$/GUIs/test.py" />
+        <option value="$PROJECT_DIR$/GUIs/UserPage.py" />
+        <option value="$PROJECT_DIR$/GUIs/homepage.py" />
+        <option value="$PROJECT_DIR$/GUIs/filmselect.py" />
+        <option value="$PROJECT_DIR$/GUIs/castselect.py" />
+        <option value="$PROJECT_DIR$/GUIs/castpage.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="111" />
-    <option name="y" value="7" />
+    <option name="x" value="-105" />
+    <option name="y" value="36" />
     <option name="width" value="1805" />
     <option name="height" value="1105" />
   </component>
@@ -185,7 +160,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -207,11 +181,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/GUIs/castpage.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/GUIs/homepage.py" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -241,7 +216,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GUIs/castpage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GUIs/homepage.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -273,21 +248,24 @@
       <workItem from="1544238043905" duration="2101000" />
       <workItem from="1544240206785" duration="501000" />
       <workItem from="1544275781151" duration="1362000" />
+      <workItem from="1544616546880" duration="10305000" />
+      <workItem from="1544631001673" duration="6053000" />
+      <workItem from="1544683050676" duration="399000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46546000" />
+    <option name="totallyTimeSpent" value="63303000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" x="6" y="89" width="345" height="612" id="Project" order="0" sideWeight="0.49346405" visible="true" weight="0.18498659" />
+      <window_info content_ui="combo" x="6" y="89" width="345" height="612" id="Project" order="0" sideWeight="0.49346405" visible="true" weight="0.20710456" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50653595" side_tool="true" weight="0.1796875" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.43866667" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.40509915" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -295,7 +273,7 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.9065156" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.49150142" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -311,52 +289,57 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/GUIs/filmpage.py" />
+    <entry file="file://$PROJECT_DIR$/SQL/connect" />
+    <entry file="file://$PROJECT_DIR$/GUIs/cxk.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://C:/Python/Lib/site-packages/pymysql/connections.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13925">
+          <caret line="581" selection-start-line="581" selection-end-line="581" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUIs/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="111" selection-start-line="3" selection-start-column="111" selection-end-line="3" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python/Lib/tkinter/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="1698" selection-start-line="1698" selection-end-line="1698" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/to潘俊汝/数学系资料/数据库大作业12.15/collegeselect.py" />
+    <entry file="file://E:/to潘俊汝/数学系资料/数据库大作业12.15/courseselect.py" />
     <entry file="file://$PROJECT_DIR$/SQL/初级建表_pjr.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="26" selection-start-line="26" selection-end-line="26" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUIs/test.py" />
-    <entry file="file://$PROJECT_DIR$/SQL/connect" />
-    <entry file="file://$PROJECT_DIR$/GUIs/castselect.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUIs/UserPage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUIs/castpage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2175">
-          <caret line="89" column="50" selection-start-line="89" selection-start-column="50" selection-end-line="89" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="110">
+          <caret line="44" column="35" lean-forward="true" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SQL/SQLQuery1_pjr.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2400">
+        <state relative-caret-position="96">
           <caret line="96" selection-start-line="96" selection-end-line="96" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/GUIs/galgadot.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUIs/duanbeishan.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUIs/duanbeishan2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://E:/to潘俊汝/数学系资料/数据库大作业12.15/mainsystem.py" />
     <entry file="file://$PROJECT_DIR$/SQL/insert_pjr.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
@@ -364,10 +347,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SQL/12.11 New SQL.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="1" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python/Lib/site-packages/PIL/Image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="2579" selection-start-line="2579" selection-end-line="2579" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUIs/UserPage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="28" column="83" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="83" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQL/用到的数据.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUIs/filmselect.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1025">
+          <caret line="44" column="58" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUIs/castselect.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/GUIs/homepage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="38" column="27" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
+        <state relative-caret-position="175">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="15" selection-end-column="36" />
+          <folding>
+            <element signature="e#24#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUIs/developerpage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="2" selection-end-column="14" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
@@ -376,28 +417,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GUIs/mainsystem.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
+        <state relative-caret-position="250">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GUIs/developerpage.py">
+    <entry file="file://$PROJECT_DIR$/GUIs/castpage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUIs/filmselect.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5">
-          <caret line="107" column="6" selection-start-line="107" selection-start-column="6" selection-end-line="115" selection-end-column="34" />
+        <state relative-caret-position="122">
+          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
