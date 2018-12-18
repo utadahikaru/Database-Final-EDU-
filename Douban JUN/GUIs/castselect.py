@@ -7,13 +7,13 @@ class castselect():
     def __init__(self, master):
         castselectTk = master
         filmselTk = master
-        self.img = Image.open('C:\Database-Final-EDU-\Douban JUN\GUIs\\background2.jpg')
+        self.img = Image.open("Douban JUN/GUIs/background2.jpg")
         self.imgphoto = ImageTk.PhotoImage(self.img)
         self.imgtext = Text(filmselTk, width=800, height=650)
         self.imgtext.image_create(END, image=self.imgphoto)
         self.imgtext.place(x=0, y=0)
         self.castentry = Entry(castselectTk, textvariable=StringVar(
-        ), text='请输入演员名称：', font=('Times New Roman', 12),bg='white')  # Label“请输入电影名称”
+        ), text='请输入演员名称：', font=('Times New Roman', 12), bg='white')  # Label“请输入电影名称”
         self.castentry.place(x=220, y=50, width=300, height=35)
         self.castselectbt1 = Button(
             castselectTk, text='查询', command=self.directtocast, bg='green', fg='white')  # 查询Button

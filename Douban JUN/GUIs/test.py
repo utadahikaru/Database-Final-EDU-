@@ -1,7 +1,6 @@
 import pymysql
 
-conn_info = pyodbc.connect(
-            'DRIVER={SQL Server};server=localhost;PORT=1433;database=DounbanJUN;user=sa;password=Junrupan9393')
+
 curs = conn_info.cursor()
 
 s = '断背山'
