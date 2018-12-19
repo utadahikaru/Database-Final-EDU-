@@ -15,10 +15,10 @@ class castsel():
         mainloop()
 
     def etgetsel(self):
-        mycolor = '#215297'
         s = "安妮 海瑟薇"
         userId = '000000'
         castId = '009'
+        mycolor = '#215297'
         print('传递到的名字为' + s)
         conn_info = pymysql.connect(
             "localhost", "test", "testnmb", "DOUBAN_JUN")
@@ -96,17 +96,25 @@ class castsel():
         curs.execute(userLoveRate)
         self.usersRate = str(curs.fetchall()[0][0])
         print(self.usersRate)
+
         if self.usersRate == 0:
-            self.scoreentry = Entry(castselTk, textvariable=StringVar(), text='0.0', font=(
+            self.scoreentry = Entry(castselTk, textvariable=StringVar(), text='1', font=(
                 'Times New Roman', 34), bg=mycolor, fg='white')  # entry 输入评分
             self.scoreentry.place(x=630, y=400, width=80, height=70)
             self.scoresubmit = Button(
-                castselTk, text='提交', bg='red', fg='white')  # 查询Button
+                castselTk, text='提交', bg='red', fg='white', command=updateRate)  # 查询Button
             self.scoresubmit.place(x=630, y=490, width=93, height=28)
         else:
             self.scoreentry = Label(castselTk, text=self.usersRate,
                                     font=('Helvetica', 34), bg=mycolor, fg='white')  # entry 输入评分
             self.scoreentry.place(x=630, y=400, width=80, height=70)
+
+        # self.scoreentry = Entry(castselTk, textvariable=StringVar(), text='1', font=(
+        #     'Times New Roman', 34), bg=mycolor, fg='white')  # entry 输入评分
+        # self.scoreentry.place(x=630, y=400, width=80, height=70)
+        # self.scoresubmit = Button(
+        #     castselTk, text='提交', bg='red', fg='white')  # 查询Button
+        # self.scoresubmit.place(x=630, y=490, width=93, height=28)
 
         self.filmlabel = Label(castselTk, text='出演电影', font=(
             '微软雅黑', 16), bg=mycolor, fg='white')
@@ -153,6 +161,15 @@ class castsel():
         self.filmdateLabel.place(x=250, y=430, width=130, height=40)
         # 从SQL数据库中获取电影的日期
 
+        conn_info.close()
+
+    def updateRate(self):
+        conn_info = pymysql.connect(
+            "localhost", "test", "testnmb", "DOUBAN_JUN")
+        curs = conn_info.cursor()
+        updateSQL = '''update usersLove set userLoveRate = %s where castId =%s''' % (
+            self.scoreentry.get(), self.castId)
+        curs.execute(updateSQL)
         conn_info.close()
 
 

@@ -6,6 +6,7 @@ import pymysql
 class filmsel():
     def __init__(self, master):
         mycolor = '#215297'
+        userId = '000000'
         filmselTk = master
         self.img = Image.open("Douban JUN/GUIs/background2.jpg")
         self.imgphoto = ImageTk.PhotoImage(self.img)
@@ -100,7 +101,7 @@ class filmsel():
         self.scoreCN = Label(filmselTk, text='豆瓣评分',
                              font=('微软雅黑', 25), bg=mycolor, fg='white')  # Label“标签”
         self.scoreCN.place(x=120, y=430, width=140, height=41)
-        self.score = Label(filmselTk, text='0.0',
+        self.score = Label(filmselTk, text=resultscore,
                            font=('微软雅黑', 34), bg=mycolor, fg='white')  # Label 电影评分
         self.score.place(x=130, y=480, width=81, height=81)
         self.scoreCN = Label(filmselTk, text='我的评分',

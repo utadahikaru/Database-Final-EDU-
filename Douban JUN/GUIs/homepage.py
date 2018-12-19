@@ -75,7 +75,7 @@ class homesel():
         else:
             self.nameEntry.select_clear()
             self.pwentry.select_clear()
-            r = messagebox.showerror('消息框', '密码错误，请重新输入')
+            r = messagebox.showerror('消息框', '修改成功!')
 
     def directtocast(self):
         from castselect import castsel
